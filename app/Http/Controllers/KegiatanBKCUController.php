@@ -417,7 +417,6 @@ class KegiatanBKCUController extends Controller{
 
 		$id_cu = Auth::user()->getIdCu();
 		if($id_cu != 0){
-
 			// check interval
 			$dataPeserta = KegiatanPeserta::with('aktivis.pekerjaan_aktif.cu')->where('kegiatan_id', $id)->whereHas('aktivis.pekerjaan_aktif.cu', function($query) use($id_cu){
 				$query->where('id', $id_cu);
@@ -427,13 +426,13 @@ class KegiatanBKCUController extends Controller{
 			// send notif if interval different is more than 2 hours
 			if($dataPeserta){
 				$diff = $time->diffInHours($dataPeserta->created_at);
-				if($diff > 2){
+				// if($diff > 2){
 					if($kegiatan_tipe == 'diklat_bkcu'){
 						NotificationHelper::diklat_bkcu($id_cu, $id,'menambah peserta');
 					}else{
 						NotificationHelper::pertemuan_bkcu($id_cu, $id,'menambah peserta');
 					}
-				}
+				// }
 			}else{
 				if($kegiatan_tipe == 'diklat_bkcu'){
 					NotificationHelper::diklat_bkcu($id_cu, $id,'menambah peserta');

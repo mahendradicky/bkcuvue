@@ -23,6 +23,7 @@ Vue.use(VueRouter);
 Vue.use(VeeValidate, {
   fieldsBagName: 'formFields'
 });
+// require('./bootstrap');
 Vue.use(Vue2Filters);
 Vue.use(VueKatex);
 Vue.use(VTooltip);

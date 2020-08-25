@@ -7,8 +7,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Notifications\Messages\BroadcastMessage;
 
-class DiklatBKCU extends Notification
+class DiklatBKCU extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -37,7 +38,7 @@ class DiklatBKCU extends Notification
      */
     public function via($notifiable)
     {
-        return ['database'];
+        return ['database','broadcast'];
     }
 
     /**
@@ -76,4 +77,14 @@ class DiklatBKCU extends Notification
             'message' => $this->message,
         ];
     }
+
+    public function toBroadcast($notifiable)
+{
+    return new BroadcastMessage([
+        'user' => $this->user,
+        'username' => $this->username,
+        'url' => $this->url,
+        'message' => $this->message,
+    ]);
+}
 }

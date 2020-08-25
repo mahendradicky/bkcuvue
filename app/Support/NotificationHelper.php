@@ -8,6 +8,7 @@ use Validator;
 use Illuminate\Http\Request;
 use App\User;
 use App\Cu;
+use App\Jobs\Notif2;
 use App\Tp;
 use App\Notifications\Notif;
 use App\Notifications\Laporan;
@@ -105,6 +106,10 @@ class NotificationHelper{
 			$cu_name = ' (CU ' .$cu->name. ') ';	
 		}
 
+		// $job = new Notif2($cu_name,$users,$kegiatan_id,$message);
+		// dispatch($job);
+		// Notif2::dispatchNow($cu_name,$users,$kegiatan_id,$message);
+
 		Notification::send($users, new Notif(
 			'diklatBKCU',
 			$kegiatan_id,
@@ -133,12 +138,11 @@ class NotificationHelper{
 			$cu = Cu::where('id', Auth::user()->id_cu)->select('id', 'name')->first();
 			$cu_name = ' (CU ' .$cu->name. ') ';	
 		}
-
-		Notification::send($users, new Notif(
-			'pertemuanBKCU',
-			$kegiatan_id,
-			Auth::user()->username . $cu_name . strtolower($message)
-		));
+		// Notification::send($users, new Notif(
+		// 	'pertemuanBKCU',
+		// 	$kegiatan_id,
+		// 	Auth::user()->username . $cu_name . strtolower($message)
+		// ));
 	}
 
 	public static function pertemuan_bkcu_status($kegiatan_id, $id_cus, $message)

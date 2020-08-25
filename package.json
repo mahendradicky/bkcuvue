@@ -36,6 +36,7 @@
         "hooper": "^0.3.4",
         "imagemin": "^5.0.0",
         "laravel-vue-pagination": "^2.3.1",
+        "laravel-echo": "^1.8.0",
         "moment": "^2.24.0",
         "node-sass": "^4.14.1",
         "qrcode.vue": "^1.7.0",

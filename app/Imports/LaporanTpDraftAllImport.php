@@ -4,6 +4,7 @@ namespace App\Imports;
 
 use Auth;
 use App\LaporanTpDraft;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
@@ -12,15 +13,17 @@ use Maatwebsite\Excel\Concerns\WithChunkReading;
 class LaporanTpDraftAllImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChunkReading
 {
     /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
+     * @param array $row
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
     public function model(array $row)
     {
         return new LaporanTpDraft([
+            // LaporanTpDraft::create([
             'id_user' => Auth::user()->getId(),
             'no_ba' => $row['no_ba'],
+            // dd($row['no_ba']),
             'no_tp' => $row['no_tp'],
             'l_biasa' => $row['lelaki_biasa'],
             'l_lbiasa' => $row['lelaki_luar_biasa'],
@@ -68,7 +71,7 @@ class LaporanTpDraftAllImport implements ToModel, WithHeadingRow, WithBatchInser
     {
         return 1000;
     }
-    
+
     public function chunkSize(): int
     {
         return 1000;

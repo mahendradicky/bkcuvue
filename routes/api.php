@@ -2,16 +2,17 @@
 
 use Illuminate\Http\Request;
 
-Route::group(['prefix' => 'auth'],function($router){
+Route::group(['prefix' => 'auth'], function ($router) {
     Route::post('/login', 'AuthController@login');
     Route::post('/logout', 'AuthController@logout');
     Route::post('/refresh', 'AuthController@refresh');
     Route::get('/me', 'AuthController@me');
 });
 
-Route::group(['middleware'=>'jwt.auth'],function(){
-// Route::group(['prefix'=>'v1'],function(){
-
+Route::group(['middleware' => 'jwt.auth'], function () {
+    // Route::group(['prefix'=>'v1'],function(){
+    Route::post('/fileUpload/store', 'FilesUploadController@store');
+    Route::post('/fileUpload/execute', 'FilesUploadController@execute');
     // auth
     // Route::get('/userId', 'AuthController@userId');
     // Route::get('/profile', 'AuthController@profile');
@@ -35,13 +36,13 @@ Route::group(['middleware'=>'jwt.auth'],function(){
     Route::group(['middleware' => ['permission:create_user']], function () {
         Route::get('/user/create', 'UserController@create');
         Route::post('/user/store', 'UserController@store');
-    }); 
-    Route::group(['middleware' => ['permission:update_user']], function () {   
+    });
+    Route::group(['middleware' => ['permission:update_user']], function () {
         Route::get('/user/edit/{id}', 'UserController@edit');
         Route::get('/user/editHakAkses/{id}', 'UserController@editHakAkses');
         Route::post('/user/update/{id}', 'UserController@update');
         Route::post('/user/updateStatus/{id}', 'UserController@updateStatus');
-        Route::post('/user/updateHakAkses/{id}', 'UserController@updateHakAkses'); 
+        Route::post('/user/updateHakAkses/{id}', 'UserController@updateHakAkses');
         Route::post('/user/updateResetPassword/{id}', 'UserController@updateResetPassword');
     });
     Route::group(['middleware' => ['permission:destroy_user']], function () {
@@ -69,7 +70,7 @@ Route::group(['middleware'=>'jwt.auth'],function(){
     Route::group(['middleware' => ['permission:destroy_artikel']], function () {
         Route::delete('/artikel/{id}', 'ArtikelController@destroy');
     });
-    
+
     //artikel kategori
     Route::get('/artikelKategori/history', 'ArtikelKategoriController@history');
     Route::group(['middleware' => ['permission:index_artikel_kategori']], function () {
@@ -129,15 +130,15 @@ Route::group(['middleware'=>'jwt.auth'],function(){
     Route::group(['middleware' => ['permission:destroy_artikel']], function () {
         Route::delete('/artikelSimo/{id}', 'ArtikelSimoController@destroy');
     });
-    
+
     // cu
     Route::get('/cu/count', 'CuController@count');
     Route::get('/cu/history', 'CuController@history');
-    Route::get('/cu/getHeader', 'CuController@getHeader');   
+    Route::get('/cu/getHeader', 'CuController@getHeader');
     Route::group(['middleware' => ['permission:index_cu']], function () {
         Route::get('/cu', 'CuController@index');
         Route::get('/cu/deleted', 'CuController@indexDeleted');
-        Route::get('/cu/get', 'CuController@get');  
+        Route::get('/cu/get', 'CuController@get');
         Route::get('/cu/getPus/{id}', 'CuController@getPus');
         Route::get('/cu/edit/{id}', 'CuController@edit');
     });
@@ -161,7 +162,7 @@ Route::group(['middleware'=>'jwt.auth'],function(){
     Route::group(['middleware' => ['permission:index_tp']], function () {
         Route::get('/tp', 'TpController@index');
         Route::get('/tp/get', 'TpController@get');
-        Route::get('/tp/indexCu/{id}', 'TpController@indexCu'); 
+        Route::get('/tp/indexCu/{id}', 'TpController@indexCu');
     });
     Route::group(['middleware' => ['permission:create_tp']], function () {
         Route::get('/tp/create', 'TpController@create');
@@ -184,7 +185,7 @@ Route::group(['middleware'=>'jwt.auth'],function(){
     Route::group(['middleware' => ['permission:index_produk_cu']], function () {
         Route::get('/produkcu', 'ProdukCuController@index');
         Route::get('/produkcu/get', 'ProdukCuController@get');
-        Route::get('/produkcu/indexCu/{id}', 'ProdukCuController@indexCu'); 
+        Route::get('/produkcu/indexCu/{id}', 'ProdukCuController@indexCu');
     });
     Route::group(['middleware' => ['permission:create_produk_cu']], function () {
         Route::get('/produkcu/create', 'ProdukCuController@create');
@@ -379,8 +380,10 @@ Route::group(['middleware'=>'jwt.auth'],function(){
 
     // assesment Access
     Route::get('/assesmentAccess/history', 'AssesmentAccessController@history');
-    Route::get('/assesmentAccess/cariData/{cu}/{periode}', 
-    'AssesmentAccessController@cariData');
+    Route::get(
+        '/assesmentAccess/cariData/{cu}/{periode}',
+        'AssesmentAccessController@cariData'
+    );
     Route::get('/assesmentAccess/edit/{id}', 'AssesmentAccessController@edit');
     Route::group(['middleware' => ['permission:index_assesment_access']], function () {
         Route::get('/assesmentAccess', 'AssesmentAccessController@index');
@@ -483,10 +486,10 @@ Route::group(['middleware'=>'jwt.auth'],function(){
         Route::get('/anggotaCu', 'AnggotaCuController@index');
         Route::get('/anggotaCu/keluar', 'AnggotaCuController@indexKeluar');
         Route::get('/anggotaCu/indexMeninggal', 'AnggotaCuController@indexMeninggal');
-        Route::get('/anggotaCu/indexCu/{cu}/{tp}', 'AnggotaCuController@indexCu'); 
-        Route::get('/anggotaCu/indexCuKeluar/{cu}/{tp}', 'AnggotaCuController@indexCuKeluar'); 
-        Route::get('/anggotaCu/indexCuMeninggal/{cu}/{tp}', 'AnggotaCuController@indexCuMeninggal'); 
-        Route::get('/anggotaCu/indexProduk/{id}/cu/{cu}', 'AnggotaProdukCuController@index'); 
+        Route::get('/anggotaCu/indexCu/{cu}/{tp}', 'AnggotaCuController@indexCu');
+        Route::get('/anggotaCu/indexCuKeluar/{cu}/{tp}', 'AnggotaCuController@indexCuKeluar');
+        Route::get('/anggotaCu/indexCuMeninggal/{cu}/{tp}', 'AnggotaCuController@indexCuMeninggal');
+        Route::get('/anggotaCu/indexProduk/{id}/cu/{cu}', 'AnggotaProdukCuController@index');
     });
     Route::group(['middleware' => ['permission:create_anggota_cu']], function () {
         Route::get('/anggotaCu/create', 'AnggotaCuController@create');
@@ -533,7 +536,7 @@ Route::group(['middleware'=>'jwt.auth'],function(){
     Route::get('/jalinanKlaim/getStatus/{status_klaim}', 'JalinanKlaimController@getStatus');
     Route::group(['middleware' => ['permission:index_jalinan_klaim']], function () {
         Route::get('/jalinanKlaim/status/{status}/{awal}/{akhir}', 'JalinanKlaimController@index');
-        Route::get('/jalinanKlaim/indexCu/{cu}/tp/{tp}/status/{status}/{awal}/{akhir}', 'JalinanKlaimController@indexCu'); 
+        Route::get('/jalinanKlaim/indexCu/{cu}/tp/{tp}/status/{status}/{awal}/{akhir}', 'JalinanKlaimController@indexCu');
         Route::get('/jalinanKlaim/cariData/{nik}', 'JalinanKlaimController@cariData');
     });
     Route::group(['middleware' => ['permission:create_jalinan_klaim']], function () {
@@ -560,7 +563,7 @@ Route::group(['middleware'=>'jwt.auth'],function(){
         Route::get('/jalinanKlaim/indexLaporanCu/{status}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanCu');
         Route::get('/jalinanKlaim/indexLaporanCuDetail/{cu}/{status}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanCuDetail');
         Route::get('/jalinanKlaim/indexLaporanPenyebab/{cu}/{status}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanPenyebab');
-        Route::get('/jalinanKlaim/indexLaporanPenyebabDetail/{cu}/{status}/{kategori}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanPenyebabDetail'); 
+        Route::get('/jalinanKlaim/indexLaporanPenyebabDetail/{cu}/{status}/{kategori}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanPenyebabDetail');
         Route::get('/jalinanKlaim/indexLaporanUsia/{cu}/{status}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanUsia');
         Route::get('/jalinanKlaim/indexLaporanUsiaDetail/{cu}/{status}/{dari}/{ke}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanUsiaDetail');
         Route::get('/jalinanKlaim/indexLaporanLama/{cu}/{status}/{awal}/{akhir}', 'JalinanKlaimController@indexLaporanLama');
@@ -601,8 +604,8 @@ Route::group(['middleware'=>'jwt.auth'],function(){
         Route::delete('/laporanCuDiskusi/{id}', 'LaporanCuDiskusiController@destroy');
     });
     Route::group(['middleware' => ['permission:upload_laporan_cu']], function () {
-        Route::post('/laporanCu/uploadExcel', 'LaporanCuController@uploadExcel');
-        Route::post('/laporanCu/uploadExcelAll', 'LaporanCuController@uploadExcelAll');
+        Route::post('/laporanCu/uploadExcelTp', 'LaporanCuController@uploadExcel');
+        Route::post('/laporanCu/uploadExcelCuAll', 'LaporanCuController@uploadExcelCuAll');
 
         Route::get('/laporanCuDraft', 'LaporanCuDraftController@index');
         Route::post('/laporanCuDraft/store/{id}', 'LaporanCuDraftController@store');
@@ -647,8 +650,8 @@ Route::group(['middleware'=>'jwt.auth'],function(){
         Route::delete('/laporanTpDiskusi/{id}', 'LaporanTpDiskusiController@destroy');
     });
     Route::group(['middleware' => ['permission:upload_laporan_tp']], function () {
-        Route::post('/laporanTp/uploadExcel', 'LaporanTpController@uploadExcel');
-        Route::post('/laporanTp/uploadExcelAll', 'LaporanTpController@uploadExcelAll');
+        Route::post('/laporanTp/uploadExcelTp', 'LaporanTpController@uploadExcelTp');
+        Route::post('/laporanTp/uploadExcelTpAll', 'LaporanTpController@uploadExcelTpAll');
 
         Route::get('/laporanTpDraft', 'LaporanTpDraftController@index');
         Route::post('/laporanTpDraft/store/{id}', 'LaporanTpDraftController@store');
@@ -775,17 +778,13 @@ Route::group(['middleware'=>'jwt.auth'],function(){
     Route::delete('/villages/{id}', 'VillagesController@destroy');
 
     // file
-    Route::get('download/{filename}','SystemController@download_file');
-    Route::get('download_folder/{filename}/{foldername}','SystemController@download_file_folder');
-    Route::get('countOrganisasi','SystemController@countOrganisasi');
+    Route::get('download/{filename}', 'SystemController@download_file');
+    Route::get('download_folder/{filename}/{foldername}', 'SystemController@download_file_folder');
+    Route::get('countOrganisasi', 'SystemController@countOrganisasi');
 
     // notification
     Route::get('/notification/get', 'NotificationController@get');
     Route::get('/notification/getAll', 'NotificationController@getAll');
     Route::get('/notification/markRead/{id}', 'NotificationController@markRead');
     Route::get('/notification/markAllRead', 'NotificationController@markAllRead');
-    
 });
-
-
-

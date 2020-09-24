@@ -15,11 +15,10 @@ export const laporanCu = {
     grafikPearls: [],
     pearls: [],
     periode: [],
-    columnData: [
-      {//0
+    columnData: [{ //0
         title: "No.",
       },
-      {//1
+      { //1
         title: "Nama CU",
         name: "cu.name",
         excelName: "cu_name",
@@ -30,7 +29,7 @@ export const laporanCu = {
         isChart: false,
         filter: true,
       },
-      {//2
+      { //2
         title: "Nama TP/KP",
         name: "tp.name",
         excelName: "tp_name",
@@ -41,7 +40,7 @@ export const laporanCu = {
         isChart: false,
         filter: true,
       },
-      {//3
+      { //3
         title: "No. BA",
         name: "laporan_cu.no_ba",
         excelName: "no_ba",
@@ -52,7 +51,7 @@ export const laporanCu = {
         isChart: false,
         filter: true
       },
-      {//4
+      { //4
         title: "Provinsi",
         name: "provinces.name",
         excelName: "provinces_name",
@@ -63,7 +62,7 @@ export const laporanCu = {
         isChart: false,
         filter: true
       },
-      {//5
+      { //5
         title: "Periode",
         name: "periode",
         tipe: "string",
@@ -73,7 +72,7 @@ export const laporanCu = {
         isChart: false,
         filter: true,
       },
-      {//6
+      { //6
         title: "Jmlh. TP/KP",
         name: "tp",
         tipe: "numeric",
@@ -83,7 +82,7 @@ export const laporanCu = {
         isChart: false,
         filter: true
       },
-      {//7
+      { //7
         title: "Lelaki Biasa",
         name: "l_biasa",
         tipe: "numeric",
@@ -94,18 +93,18 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//8
+      { //8
         title: "Lelaki L.Biasa",
         name: "l_lbiasa",
         tipe: "numeric",
         sort: true,
         hide: false,
         disable: false,
-        isChart: true, 
+        isChart: true,
         isChartSelect: false,
         filter: true
       },
-      {//9
+      { //9
         title: "Perempuan Biasa",
         name: "p_biasa",
         tipe: "numeric",
@@ -116,7 +115,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//10
+      { //10
         title: "Perempuan L.Biasa",
         name: "p_lbiasa",
         tipe: "numeric",
@@ -127,7 +126,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//11
+      { //11
         title: "Total Anggota",
         name: "total_anggota",
         tipe: "numeric",
@@ -137,7 +136,7 @@ export const laporanCu = {
         isChart: true,
         isChartSelect: true
       },
-      {//12
+      { //12
         title: "Total Anggota Lalu",
         name: "total_anggota_lalu",
         tipe: "numeric",
@@ -148,7 +147,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//13
+      { //13
         title: "Aset",
         name: "aset",
         tipe: "numeric",
@@ -160,7 +159,7 @@ export const laporanCu = {
         filter: true,
         filterDefault: true
       },
-      {//14
+      { //14
         title: "Aset Lalu",
         name: "aset_lalu",
         tipe: "numeric",
@@ -171,7 +170,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//15
+      { //15
         title: "Aset Masalah",
         name: "aset_masalah",
         tipe: "numeric",
@@ -182,7 +181,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//16
+      { //16
         title: "Aset Tdk Menghasilkan",
         name: "aset_tidak_menghasilkan",
         tipe: "numeric",
@@ -193,7 +192,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//17
+      { //17
         title: "Aset Likuid Tdk Menghasilkan",
         name: "aset_likuid_tidak_menghasilkan",
         tipe: "numeric",
@@ -204,7 +203,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//18
+      { //18
         title: "Aktiva Lancar",
         name: "aktiva_lancar",
         tipe: "numeric",
@@ -215,7 +214,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//19
+      { //19
         title: "Simp. Saham",
         name: "simpanan_saham",
         tipe: "numeric",
@@ -226,7 +225,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//20
+      { //20
         title: "Simp. Saham Lalu",
         name: "simpanan_saham_lalu",
         tipe: "numeric",
@@ -237,7 +236,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//21
+      { //21
         title: "Simp. Saham Des",
         name: "simpanan_saham_des",
         tipe: "numeric",
@@ -248,7 +247,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//22
+      { //22
         title: "Simp. Nonsaham Unggulan",
         name: "nonsaham_unggulan",
         tipe: "numeric",
@@ -259,7 +258,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//23
+      { //23
         title: "Simp. Nonsaham Harian",
         name: "nonsaham_harian",
         tipe: "numeric",
@@ -270,7 +269,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//24
+      { //24
         title: "Hutang SPD",
         name: "hutang_spd",
         tipe: "numeric",
@@ -281,7 +280,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//25
+      { //25
         title: "Hutang Tdk Berbiaya",
         name: "hutang_tidak_berbiaya_30hari",
         tipe: "numeric",
@@ -292,7 +291,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//26
+      { //26
         title: "Total Hutang Pihak Ke-3",
         name: "total_hutang_pihak3",
         tipe: "numeric",
@@ -303,7 +302,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//27
+      { //27
         title: "Piutang Beredar",
         name: "piutang_beredar",
         tipe: "numeric",
@@ -314,7 +313,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//28
+      { //28
         title: "Piutang Bersih",
         name: "piutang_bersih",
         tipe: "numeric",
@@ -324,7 +323,7 @@ export const laporanCu = {
         isChart: true,
         isChartSelect: false
       },
-      {//29
+      { //29
         title: "Piutang Anggota",
         name: "piutang_anggota",
         tipe: "numeric",
@@ -335,7 +334,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//30
+      { //30
         title: "Piutang Lalai 1-12 Bulan",
         name: "piutang_lalai_1bulan",
         tipe: "numeric",
@@ -346,7 +345,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//31
+      { //31
         title: "Piutang Lalai > 12 Bulan",
         name: "piutang_lalai_12bulan",
         tipe: "numeric",
@@ -357,7 +356,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//32
+      { //32
         title: "Rasio Piutang Beredar",
         name: "rasio_beredar",
         tipe: "numeric",
@@ -367,7 +366,7 @@ export const laporanCu = {
         isChart: true,
         isChartSelect: false
       },
-      {//33
+      { //33
         title: "Rasio Piutang Lalai",
         name: "rasio_lalai",
         tipe: "numeric",
@@ -377,7 +376,7 @@ export const laporanCu = {
         isChart: true,
         isChartSelect: false
       },
-      {//34
+      { //34
         title: "DCR",
         name: "dcr",
         tipe: "numeric",
@@ -388,7 +387,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//35
+      { //35
         title: "DCU",
         name: "dcu",
         tipe: "numeric",
@@ -399,7 +398,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//36
+      { //36
         title: "Dana Gedung",
         name: "dana_gedung",
         tipe: "numeric",
@@ -410,7 +409,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//37
+      { //37
         title: "Donasi",
         name: "donasi",
         tipe: "numeric",
@@ -421,7 +420,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//38
+      { //38
         title: "BJS Saham",
         name: "bjs_saham",
         tipe: "numeric",
@@ -432,7 +431,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//39
+      { //39
         title: "Beban Penyisihan DCR",
         name: "beban_penyisihan_dcr",
         tipe: "numeric",
@@ -443,7 +442,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//40
+      { //40
         title: "Investasi Likuid",
         name: "investasi_likuid",
         tipe: "numeric",
@@ -454,7 +453,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//41
+      { //41
         title: "Total Pendapatan",
         name: "total_pendapatan",
         tipe: "numeric",
@@ -465,7 +464,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//42
+      { //42
         title: "Total Biaya",
         name: "total_biaya",
         tipe: "numeric",
@@ -476,7 +475,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//43
+      { //43
         title: "SHU",
         name: "shu",
         tipe: "numeric",
@@ -487,7 +486,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//44
+      { //44
         title: "SHU Lalu",
         name: "shu_lalu",
         tipe: "numeric",
@@ -498,7 +497,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//45
+      { //45
         title: "Rata-rata Aset",
         name: "rata_aset",
         tipe: "numeric",
@@ -509,7 +508,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//46
+      { //46
         title: "Laju Inflasi",
         name: "laju_inflasi",
         tipe: "numeric",
@@ -520,7 +519,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//47
+      { //47
         title: "Harga Pasar",
         name: "harga_pasar",
         tipe: "numeric",
@@ -531,7 +530,7 @@ export const laporanCu = {
         isChartSelect: false,
         filter: true
       },
-      {//48
+      { //48
         title: "Tgl. Buat",
         name: "created_at",
         tipe: "datetime",
@@ -541,7 +540,7 @@ export const laporanCu = {
         isChart: false,
         filter: true
       },
-      {//49
+      { //49
         title: "Tgl. Ubah",
         name: "updated_at",
         tipe: "datetime",
@@ -552,12 +551,11 @@ export const laporanCu = {
         filter: true
       },
     ],
-    columnDataPearls: [
-      {//0
+    columnDataPearls: [{ //0
         title: "No.",
         name: "No.",
       },
-      {//1
+      { //1
         title: "CU",
         name: "cu.name",
         excelName: "cu_name",
@@ -569,7 +567,7 @@ export const laporanCu = {
         filter: true,
         filterDefault: true
       },
-      {//2
+      { //2
         title: "TP",
         name: "tp.name",
         excelName: "tp_name",
@@ -581,7 +579,7 @@ export const laporanCu = {
         filter: true,
         filterDefault: false
       },
-      {//3
+      { //3
         title: "No. BA",
         name: "laporan_cu.no_ba",
         excelName: "no_ba",
@@ -592,7 +590,7 @@ export const laporanCu = {
         isChart: false,
         filter: true,
       },
-      {//4
+      { //4
         title: "Provinsi",
         name: "provinces.name",
         excelName: "provinces_name",
@@ -602,7 +600,7 @@ export const laporanCu = {
         disable: false,
         isChart: false
       },
-      {//5
+      { //5
         title: "Periode",
         name: "periode",
         tipe: "datetime",
@@ -613,7 +611,7 @@ export const laporanCu = {
         filter: true,
         filterDefault: false
       },
-      {//6
+      { //6
         title: "Jmlh TP/KP",
         name: "tp",
         tipe: "string",
@@ -623,7 +621,7 @@ export const laporanCu = {
         isChart: false,
         filter: true,
       },
-      {//7
+      { //7
         title: "Ideal",
         name: "tot_ideal",
         tipe: "numeric",
@@ -634,7 +632,7 @@ export const laporanCu = {
         filter: false,
         filterDefault: false
       },
-      {//8
+      { //8
         title: "P1 (= 100%)",
         name: "p1",
         tipe: "numeric",
@@ -644,7 +642,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//9
+      { //9
         title: "P2 (> 35%)",
         name: "p2",
         tipe: "numeric",
@@ -654,7 +652,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//10
+      { //10
         title: "E1 (70% - 80%)",
         name: "e1",
         tipe: "numeric",
@@ -664,7 +662,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//11
+      { //11
         title: "E5 (70% - 80%)",
         name: "e5",
         tipe: "numeric",
@@ -674,7 +672,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//12
+      { //12
         title: "E6 (<= 5%)",
         name: "e6",
         tipe: "numeric",
@@ -684,7 +682,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//13
+      { //13
         title: "E7 (10% - 20%)",
         name: "e7",
         tipe: "numeric",
@@ -694,7 +692,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//14
+      { //14
         title: "E9 (>= 10%)",
         name: "e9",
         tipe: "numeric",
@@ -704,7 +702,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//15
+      { //15
         title: "A1 (<= 5%)",
         name: "a1",
         tipe: "numeric",
@@ -714,7 +712,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//16
+      { //16
         title: "A2 (< 5%)",
         name: "a2",
         tipe: "numeric",
@@ -724,7 +722,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//17
+      { //17
         title: "R7 (= harga pasar)",
         name: "r7_1",
         tipe: "numeric",
@@ -734,7 +732,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//18
+      { //18
         title: "R9 (<= 5%)",
         name: "r9",
         tipe: "numeric",
@@ -744,7 +742,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//19
+      { //19
         title: "L1 (15% - 20%)",
         name: "l1",
         tipe: "numeric",
@@ -754,7 +752,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//20
+      { //20
         title: "L2 (15% - 20%)",
         name: "l2",
         tipe: "numeric",
@@ -764,7 +762,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//21
+      { //21
         title: "S10 (> 12%)",
         name: "s10",
         tipe: "numeric",
@@ -774,7 +772,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//22
+      { //22
         title: "S11 (> 10% + Laju Inflasi)",
         name: "s11",
         tipe: "numeric",
@@ -784,7 +782,7 @@ export const laporanCu = {
         filter: true,
         isChart: true,
       },
-      {//23
+      { //23
         title: "Harga Pasar",
         name: "harga_pasar",
         tipe: "numeric",
@@ -793,7 +791,7 @@ export const laporanCu = {
         disable: false,
         filter: true,
       },
-      {//24
+      { //24
         title: "Laju Inflasi",
         name: "laju_inflasi",
         tipe: "numeric",
@@ -802,7 +800,7 @@ export const laporanCu = {
         disable: false,
         filter: true,
       },
-      {//25
+      { //25
         title: "Tgl. Buat",
         name: "created_at",
         tipe: "datetime",
@@ -812,7 +810,7 @@ export const laporanCu = {
         isChart: false,
         filter: true,
       },
-      {//26
+      { //26
         title: "Tgl. Ubah",
         name: "updated_at",
         tipe: "datetime",
@@ -825,9 +823,9 @@ export const laporanCu = {
     ],
     dataStat: '',
     dataStatS: '',
-    grafikStat:'',
-    grafikPearlsStat:'',
-    pearlsStat:'',
+    grafikStat: '',
+    grafikPearlsStat: '',
+    pearlsStat: '',
     periodeStat: '',
     update: [], //update data
     updateStat: '',
@@ -861,88 +859,100 @@ export const laporanCu = {
 
   actions: {
     //load collection with params
-    index( { commit }, p ){
+    index({
+      commit
+    }, p) {
       commit('setDataStatS', 'loading');
-      
-      LaporanCuAPI.index( p )
-        .then( function( response ){
-          commit('setDataS', response.data.model );
+
+      LaporanCuAPI.index(p)
+        .then(function (response) {
+          commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
     },
 
-    indexTotal( { commit } ){
+    indexTotal({
+      commit
+    }) {
       commit('setDataStatS', 'loading');
-      
+
       LaporanCuAPI.indexTotal()
-        .then( function( response ){
-          commit('setData', response.data.model );
+        .then(function (response) {
+          commit('setData', response.data.model);
           commit('setDataStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setData', error.response);
           commit('setDataStat', 'fail');
         });
     },
 
     //gerakan
-    indexGerakan( { commit }, p ){
+    indexGerakan({
+      commit
+    }, p) {
       commit('setDataStatS', 'loading');
-      
-      LaporanCuAPI.indexGerakan( p )
-        .then( function( response ){
-          commit('setDataS', response.data.model );
+
+      LaporanCuAPI.indexGerakan(p)
+        .then(function (response) {
+          commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
     },
 
     // load by cu
-    indexCu( { commit }, [p, id] ){
+    indexCu({
+      commit
+    }, [p, id]) {
       commit('setDataStatS', 'loading');
-      
-      LaporanCuAPI.indexCu( p, id )
-        .then( function( response ){
+
+      LaporanCuAPI.indexCu(p, id)
+        .then(function (response) {
           commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
     },
 
     // load cu draft
-    indexCuDraft( { commit }, id ){
+    indexCuDraft({
+      commit
+    }, id) {
       commit('setDataStatS', 'loading');
-      
-      LaporanCuDraftAPI.index( id )
-        .then( function( response ){
+
+      LaporanCuDraftAPI.index(id)
+        .then(function (response) {
           commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
     },
 
-    indexTpDraft( { commit }, id ){
+    indexTpDraft({
+      commit
+    }, id) {
       commit('setDataStatS', 'loading');
-      
-      LaporanTpDraftAPI.index( id )
-        .then( function( response ){
+
+      LaporanTpDraftAPI.index(id)
+        .then(function (response) {
           commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
@@ -950,129 +960,147 @@ export const laporanCu = {
 
 
     // load by tp
-    indexTpPeriode( { commit }, [p, id, periode] ){
+    indexTpPeriode({
+      commit
+    }, [p, id, periode]) {
       commit('setDataStatS', 'loading');
-      
-      LaporanTpAPI.indexPeriode( p, id, periode )
-        .then( function( response ){
+
+      LaporanTpAPI.indexPeriode(p, id, periode)
+        .then(function (response) {
           commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
     },
 
-    indexTp( { commit }, [p, id] ){
+    indexTp({
+      commit
+    }, [p, id]) {
       commit('setDataStatS', 'loading');
-      
-      LaporanTpAPI.indexTp( p, id )
-        .then( function( response ){
+
+      LaporanTpAPI.indexTp(p, id)
+        .then(function (response) {
           commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
     },
-    
+
 
     // load by periode
-    indexPeriode( { commit }, [p, periode] ){
+    indexPeriode({
+      commit
+    }, [p, periode]) {
       commit('setDataStatS', 'loading');
-      
-      LaporanCuAPI.indexPeriode( p, periode )
-        .then( function( response ){
+
+      LaporanCuAPI.indexPeriode(p, periode)
+        .then(function (response) {
           commit('setDataS', response.data.model);
           commit('setDataStatS', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setDataS', error.response);
           commit('setDataStatS', 'fail');
         });
     },
 
     //load collection with params
-    indexPearls( { commit }, p ){
+    indexPearls({
+      commit
+    }, p) {
       commit('setPearlsStat', 'loading');
-      
-      LaporanCuAPI.indexPearls( p )
-        .then( function( response ){
-          commit('setPearls', response.data.model );
+
+      LaporanCuAPI.indexPearls(p)
+        .then(function (response) {
+          commit('setPearls', response.data.model);
           commit('setPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setPearls', error.response);
           commit('setPearlsStat', 'fail');
         });
     },
 
     // load by cu
-    indexPearlsCu( { commit }, [p, id] ){
+    indexPearlsCu({
+      commit
+    }, [p, id]) {
       commit('setPearlsStat', 'loading');
-      
-      LaporanCuAPI.indexPearlsCu( p, id )
-        .then( function( response ){
+
+      LaporanCuAPI.indexPearlsCu(p, id)
+        .then(function (response) {
           commit('setPearls', response.data.model);
           commit('setPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setPearls', error.response);
           commit('setPearlsStat', 'fail');
         });
     },
 
     // load by tp
-    indexPearlsTp( { commit }, [p, id] ){
+    indexPearlsTp({
+      commit
+    }, [p, id]) {
       commit('setPearlsStat', 'loading');
-      
-      LaporanTpAPI.indexPearlsTp( p, id )
-        .then( function( response ){
+
+      LaporanTpAPI.indexPearlsTp(p, id)
+        .then(function (response) {
           commit('setPearls', response.data.model);
           commit('setPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setPearls', error.response);
           commit('setPearlsStat', 'fail');
         });
     },
-    indexPearlsTpPeriode( { commit }, [p, id, periode] ){
+    indexPearlsTpPeriode({
+      commit
+    }, [p, id, periode]) {
       commit('setPearlsStat', 'loading');
-      
-      LaporanTpAPI.indexPearlsPeriode( p, id, periode )
-        .then( function( response ){
+
+      LaporanTpAPI.indexPearlsPeriode(p, id, periode)
+        .then(function (response) {
           commit('setPearls', response.data.model);
           commit('setPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setPearls', error.response);
           commit('setPearlsStat', 'fail');
         });
     },
 
     // load by periode
-    indexPearlsPeriode( { commit }, [p, periode] ){
+    indexPearlsPeriode({
+      commit
+    }, [p, periode]) {
       commit('setPearlsStat', 'loading');
-      
-      LaporanCuAPI.indexPearlsPeriode( p, periode )
-        .then( function( response ){
+
+      LaporanCuAPI.indexPearlsPeriode(p, periode)
+        .then(function (response) {
           commit('setPearls', response.data.model);
           commit('setPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setPearls', error.response);
           commit('setPearlsStat', 'fail');
         });
     },
-    
+
     // load collection of periode
-    getPeriode( {commit} ){
+    getPeriode({
+      commit
+    }) {
       commit('setPeriodeStat', 'loading');
-      
+
       LaporanCuAPI.getPeriode()
-        .then( function( response ){
+        .then(function (response) {
           commit('setPeriode', response.data.model);
           commit('setPeriodeStat', 'success');
         })
@@ -1083,11 +1111,13 @@ export const laporanCu = {
     },
 
     // load collection of periode
-    getPeriodeCu( {commit}, id ){
+    getPeriodeCu({
+      commit
+    }, id) {
       commit('setPeriodeStat', 'loading');
-      
-      LaporanCuAPI.getPeriodeCu( id )
-        .then( function( response ){
+
+      LaporanCuAPI.getPeriodeCu(id)
+        .then(function (response) {
           commit('setPeriode', response.data.model);
           commit('setPeriodeStat', 'success');
         })
@@ -1099,143 +1129,163 @@ export const laporanCu = {
 
 
     // load by periode
-    grafikGerakan( { commit }, p ){
+    grafikGerakan({
+      commit
+    }, p) {
       commit('setGrafikStat', 'loading');
-      
-      LaporanCuAPI.indexGerakan( p )
-        .then( function( response ){
+
+      LaporanCuAPI.indexGerakan(p)
+        .then(function (response) {
           commit('setGrafik', response.data.model);
           commit('setGrafikStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafik', error.response);
           commit('setGrafikStat', 'fail');
         });
     },
 
     // load by periode
-    grafikPeriode( { commit }, [p, periode] ){
+    grafikPeriode({
+      commit
+    }, [p, periode]) {
       commit('setGrafikStat', 'loading');
-      
-      LaporanCuAPI.indexPeriode( p, periode )
-        .then( function( response ){
+
+      LaporanCuAPI.indexPeriode(p, periode)
+        .then(function (response) {
           commit('setGrafik', response.data.model);
           commit('setGrafikStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafik', error.response);
           commit('setGrafikStat', 'fail');
         });
     },
 
     // load by cu
-    grafikCu( { commit }, [p, id] ){
+    grafikCu({
+      commit
+    }, [p, id]) {
       commit('setGrafikStat', 'loading');
-      
-      LaporanCuAPI.indexCu( p, id )
-        .then( function( response ){
+
+      LaporanCuAPI.indexCu(p, id)
+        .then(function (response) {
           commit('setGrafik', response.data.model);
           commit('setGrafikStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafik', error.response);
           commit('setGrafikStat', 'fail');
         });
     },
 
-    grafikTpPeriode( { commit }, [p, id, periode] ){
+    grafikTpPeriode({
+      commit
+    }, [p, id, periode]) {
       commit('setGrafikStat', 'loading');
-      
-      LaporanTpAPI.indexPeriode( p, id, periode )
-        .then( function( response ){
+
+      LaporanTpAPI.indexPeriode(p, id, periode)
+        .then(function (response) {
           commit('setGrafik', response.data.model);
           commit('setGrafikStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafik', error.response);
           commit('setGrafikStat', 'fail');
         });
     },
 
     // load by tp
-    grafikTp( { commit }, [p, id] ){
+    grafikTp({
+      commit
+    }, [p, id]) {
       commit('setGrafikStat', 'loading');
-      
-      LaporanTpAPI.indexTp( p, id )
-        .then( function( response ){
+
+      LaporanTpAPI.indexTp(p, id)
+        .then(function (response) {
           commit('setGrafik', response.data.model);
           commit('setGrafikStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafik', error.response);
           commit('setGrafikStat', 'fail');
         });
     },
 
     // load by periode
-    grafikPearlsPeriode( { commit }, [p, periode] ){
+    grafikPearlsPeriode({
+      commit
+    }, [p, periode]) {
       commit('setGrafikPearlsStat', 'loading');
-      
-      LaporanCuAPI.indexPearlsPeriode( p, periode )
-        .then( function( response ){
+
+      LaporanCuAPI.indexPearlsPeriode(p, periode)
+        .then(function (response) {
           commit('setGrafikPearls', response.data.model);
           commit('setGrafikPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafikPearls', error.response);
           commit('setGrafikPearlsStat', 'fail');
         });
     },
 
     // load by cu
-    grafikPearlsCu( { commit }, [p, id] ){
+    grafikPearlsCu({
+      commit
+    }, [p, id]) {
       commit('setGrafikPearlsStat', 'loading');
-      
-      LaporanCuAPI.indexPearlsCu( p, id )
-        .then( function( response ){
+
+      LaporanCuAPI.indexPearlsCu(p, id)
+        .then(function (response) {
           commit('setGrafikPearls', response.data.model);
           commit('setGrafikPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafikPearls', error.response);
           commit('setGrafikPearlsStat', 'fail');
         });
     },
 
-    grafikPearlsTpPeriode( { commit }, [p, id, periode] ){
+    grafikPearlsTpPeriode({
+      commit
+    }, [p, id, periode]) {
       commit('setGrafikPearlsStat', 'loading');
-      
-      LaporanTpAPI.indexPearlsPeriode( p, id, periode )
-        .then( function( response ){
+
+      LaporanTpAPI.indexPearlsPeriode(p, id, periode)
+        .then(function (response) {
           commit('setGrafikPearls', response.data.model);
           commit('setGrafikPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafikPearls', error.response);
           commit('setGrafikPearlsStat', 'fail');
         });
     },
 
     // load by tp
-    grafikPearlsTp( { commit }, [p, id] ){
+    grafikPearlsTp({
+      commit
+    }, [p, id]) {
       commit('setGrafikPearlsStat', 'loading');
-      
-      LaporanTpAPI.indexPearlsTp( p, id )
-        .then( function( response ){
+
+      LaporanTpAPI.indexPearlsTp(p, id)
+        .then(function (response) {
           commit('setGrafikPearls', response.data.model);
           commit('setGrafikPearlsStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setGrafikPearls', error.response);
           commit('setGrafikPearlsStat', 'fail');
         });
     },
 
-    create( {commit} ){
+    create({
+      commit
+    }) {
       commit('setDataStat', 'loading');
-      
+
       LaporanCuAPI.create()
-        .then( function( response ){
+        .then(function (response) {
           commit('setData', response.data.form);
           commit('setRules', response.data.rules);
           commit('setOptions', response.data.options)
@@ -1250,11 +1300,13 @@ export const laporanCu = {
     },
 
     // detail
-    detail( {commit}, id ){
+    detail({
+      commit
+    }, id) {
       commit('setDataStat', 'loading');
-      
-      LaporanCuAPI.detail( id )
-        .then( function( response ){
+
+      LaporanCuAPI.detail(id)
+        .then(function (response) {
           commit('setData', response.data.model);
           commit('setHistory', response.data.history);
           commit('setDataStat', 'success');
@@ -1265,11 +1317,13 @@ export const laporanCu = {
           commit('setDataStat', 'fail');
         });
     },
-    detailPearls( {commit}, id ){
+    detailPearls({
+      commit
+    }, id) {
       commit('setPearlsStat', 'loading');
-      
-      LaporanCuAPI.detailPearls( id )
-        .then( function( response ){
+
+      LaporanCuAPI.detailPearls(id)
+        .then(function (response) {
           commit('setPearls', response.data.model);
           commit('setPearlsStat', 'success');
         })
@@ -1278,26 +1332,30 @@ export const laporanCu = {
           commit('setPearlsStat', 'fail');
         });
     },
-    detailTp( {commit}, id ){
+    detailTp({
+      commit
+    }, id) {
       commit('setDataStat', 'loading');
-      
-      LaporanTpAPI.detail( id )
-        .then( function( response ){
+
+      LaporanTpAPI.detail(id)
+        .then(function (response) {
           commit('setData', response.data.model);
           commit('setHistory', response.data.history);
           commit('setDataStat', 'success');
         })
-        .catch( error => {
+        .catch(error => {
           commit('setData', error.response);
           commit('setHistory', '');
           commit('setDataStat', 'fail');
         });
     },
-    detailPearlsTp( {commit}, id ){
+    detailPearlsTp({
+      commit
+    }, id) {
       commit('setPearlsStat', 'loading');
-      
-      LaporanTpAPI.detailPearls( id )
-        .then( function( response ){
+
+      LaporanTpAPI.detailPearls(id)
+        .then(function (response) {
           commit('setPearls', response.data.model);
           commit('setPearlsStat', 'success');
         })
@@ -1308,116 +1366,142 @@ export const laporanCu = {
     },
 
     //store data
-    store( {commit, state, dispatch}, form ){
+    store({
+      commit,
+      state,
+      dispatch
+    }, form) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuAPI.store( form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanCuAPI.store(form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    storeTp( {commit, state, dispatch}, form ){
+    storeTp({
+      commit,
+      state,
+      dispatch
+    }, form) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpAPI.store( form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanTpAPI.store(form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    storeDraft( {commit, state, dispatch}, id ){
+    storeDraft({
+      commit,
+      state,
+      dispatch
+    }, id) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuDraftAPI.store( id )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanCuDraftAPI.store(id)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    storeDraftAll( {commit, state, dispatch} ){
+    storeDraftAll({
+      commit,
+      state,
+      dispatch
+    }) {
       commit('setUpdateStat', 'loading');
 
       LaporanCuDraftAPI.storeAll()
-        .then( function( response ){
-          if(response.data.saved){
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    storeTpDraft( {commit, state, dispatch}, id ){
+    storeTpDraft({
+      commit,
+      state,
+      dispatch
+    }, id) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpDraftAPI.store( id )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanTpDraftAPI.store(id)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    storeTpDraftAll( {commit, state, dispatch} ){
+    storeTpDraftAll({
+      commit,
+      state,
+      dispatch
+    }) {
       commit('setUpdateStat', 'loading');
 
       LaporanTpDraftAPI.storeAll()
-        .then( function( response ){
-          if(response.data.saved){
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
 
 
     // edit page
-    edit( {commit}, id ){
+    edit({
+      commit
+    }, id) {
       commit('setDataStat', 'loading');
-      
-      LaporanCuAPI.edit( id )
-        .then( function( response ){
+
+      LaporanCuAPI.edit(id)
+        .then(function (response) {
           commit('setData', response.data.form);
           commit('setRules', response.data.rules);
           commit('setOptions', response.data.options)
@@ -1431,11 +1515,13 @@ export const laporanCu = {
         });
     },
     //edit tp
-    editTp( {commit}, id ){
+    editTp({
+      commit
+    }, id) {
       commit('setDataStat', 'loading');
-      
-      LaporanTpAPI.edit( id )
-        .then( function( response ){
+
+      LaporanTpAPI.edit(id)
+        .then(function (response) {
           commit('setData', response.data.form);
           commit('setRules', response.data.rules);
           commit('setOptions', response.data.options)
@@ -1448,11 +1534,13 @@ export const laporanCu = {
           commit('setDataStat', 'fail');
         });
     },
-    editDraft( {commit}, id ){
+    editDraft({
+      commit
+    }, id) {
       commit('setDataStat', 'loading');
-      
-      LaporanCuDraftAPI.edit( id )
-        .then( function( response ){
+
+      LaporanCuDraftAPI.edit(id)
+        .then(function (response) {
           commit('setData', response.data.form);
           commit('setRules', response.data.rules);
           commit('setOptions', response.data.options)
@@ -1465,11 +1553,13 @@ export const laporanCu = {
           commit('setDataStat', 'fail');
         });
     },
-    editTpDraft( {commit}, id ){
+    editTpDraft({
+      commit
+    }, id) {
       commit('setDataStat', 'loading');
-      
-      LaporanTpDraftAPI.edit( id )
-        .then( function( response ){
+
+      LaporanTpDraftAPI.edit(id)
+        .then(function (response) {
           commit('setData', response.data.form);
           commit('setRules', response.data.rules);
           commit('setOptions', response.data.options)
@@ -1484,333 +1574,399 @@ export const laporanCu = {
     },
 
     // update data
-    update( {commit, state, dispatch}, [id, form] ){
+    update({
+      commit,
+      state,
+      dispatch
+    }, [id, form]) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuAPI.update( id, form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanCuAPI.update(id, form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    updateTp( {commit, state, dispatch}, [id, form] ){
+    updateTp({
+      commit,
+      state,
+      dispatch
+    }, [id, form]) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpAPI.update( id, form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanTpAPI.update(id, form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
           commit('setUpdate', response.data);
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    updateDraft( {commit, state, dispatch}, [id, form] ){
+    updateDraft({
+      commit,
+      state,
+      dispatch
+    }, [id, form]) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuDraftAPI.update( id, form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanCuDraftAPI.update(id, form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    updateTpDraft( {commit, state, dispatch}, [id, form] ){
+    updateTpDraft({
+      commit,
+      state,
+      dispatch
+    }, [id, form]) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpDraftAPI.update( id, form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanTpDraftAPI.update(id, form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
 
     // destroy data
-    destroy( {commit, state, dispatch}, id ){
+    destroy({
+      commit,
+      state,
+      dispatch
+    }, id) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuAPI.destroy( id )
-        .then( function( response ){
-          if(response.data.deleted){
+      LaporanCuAPI.destroy(id)
+        .then(function (response) {
+          if (response.data.deleted) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);         
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    destroyTp( {commit, state, dispatch}, id ){
+    destroyTp({
+      commit,
+      state,
+      dispatch
+    }, id) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpAPI.destroy( id )
-        .then( function( response ){
-          if(response.data.deleted){
+      LaporanTpAPI.destroy(id)
+        .then(function (response) {
+          if (response.data.deleted) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);         
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    destroyDraft( {commit, state, dispatch}, id ){
+    destroyDraft({
+      commit,
+      state,
+      dispatch
+    }, id) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuDraftAPI.destroy( id )
-        .then( function( response ){
-          if(response.data.deleted){
+      LaporanCuDraftAPI.destroy(id)
+        .then(function (response) {
+          if (response.data.deleted) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);         
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    destroyDraftAll( {commit, state, dispatch} ){
+    destroyDraftAll({
+      commit,
+      state,
+      dispatch
+    }) {
       commit('setUpdateStat', 'loading');
 
       LaporanCuDraftAPI.destroyAll()
-        .then( function( response ){
-          if(response.data.deleted){
+        .then(function (response) {
+          if (response.data.deleted) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);         
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    destroyTpDraft( {commit, state, dispatch}, id ){
+    destroyTpDraft({
+      commit,
+      state,
+      dispatch
+    }, id) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpDraftAPI.destroy( id )
-        .then( function( response ){
-          if(response.data.deleted){
+      LaporanTpDraftAPI.destroy(id)
+        .then(function (response) {
+          if (response.data.deleted) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);         
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    destroyTpDraftAll( {commit, state, dispatch} ){
+    destroyTpDraftAll({
+      commit,
+      state,
+      dispatch
+    }) {
       commit('setUpdateStat', 'loading');
 
       LaporanTpDraftAPI.destroyAll()
-        .then( function( response ){
-          if(response.data.deleted){
+        .then(function (response) {
+          if (response.data.deleted) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);         
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
 
-    uploadExcel( {commit, state, dispatch}, form ){
+    uploadExcel({
+      commit,
+      state,
+      dispatch
+    }, form) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuAPI.uploadExcel( form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanCuAPI.uploadExcel(form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
 
-    uploadExcelAll( {commit, state, dispatch}, form ){
+    uploadExcelAll({
+      commit,
+      state,
+      dispatch
+    }, form) {
       commit('setUpdateStat', 'loading');
 
-      LaporanCuAPI.uploadExcelAll( form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanCuAPI.uploadExcelAll(form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
 
-    uploadExcelTp( {commit, state, dispatch}, form ){
+    uploadExcelTp({
+      commit,
+      state,
+      dispatch
+    }, form) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpAPI.uploadExcel( form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanTpAPI.uploadExcel(form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
-    uploadExcelTpAll( {commit, state, dispatch}, form ){
+    uploadExcelTpAll({
+      commit,
+      state,
+      dispatch
+    }, form) {
       commit('setUpdateStat', 'loading');
 
-      LaporanTpAPI.uploadExcelAll( form )
-        .then( function( response ){
-          if(response.data.saved){
+      LaporanTpAPI.uploadExcelAll(form)
+        .then(function (response) {
+          if (response.data.saved) {
             commit('setUpdate', response.data);
             commit('setUpdateStat', 'success');
-          }else{
+          } else {
             commit('setUpdateStat', 'fail');
           }
         })
         .catch(error => {
-          commit('setUpdate', error.response);   
+          commit('setUpdate', error.response);
           commit('setUpdateStat', 'fail');
         });
     },
 
-    addColumnData( {commit}, data){
+    addColumnData({
+      commit
+    }, data) {
       commit('setColumnData', data);
     },
 
-    addColumnDataPearls( {commit}, data){
+    addColumnDataPearls({
+      commit
+    }, data) {
       commit('setColumnDataPearls', data);
     },
 
     // reset
-    resetUpdateStat( {commit} ){
+    resetUpdateStat({
+      commit
+    }) {
       commit('setUpdateStat', '');
     },
-    resetData( {commit} ){
+    resetData({
+      commit
+    }) {
       commit('setData', '');
       commit('setDataStat', '');
     },
-    resetDataS( {commit} ){
+    resetDataS({
+      commit
+    }) {
       commit('setDataS', '');
       commit('setDataStatS', '');
     },
-    
+
   },
 
   // mutations
   mutations: {
-    setData ( state, data ){
+    setData(state, data) {
       state.data = data;
     },
-    setDataS ( state, data ){
+    setDataS(state, data) {
       state.dataS = data;
     },
-    setHistory ( state, data ){
+    setHistory(state, data) {
       state.history = data;
     },
-    setGrafik( state, data ){
+    setGrafik(state, data) {
       state.grafik = data;
     },
-    setGrafikPearls( state, data ){
+    setGrafikPearls(state, data) {
       state.grafikPearls = data;
     },
-    setPearls( state, data ){
+    setPearls(state, data) {
       state.pearls = data;
     },
-    setPeriode( state, data ){
+    setPeriode(state, data) {
       state.periode = data;
     },
-    setColumnData(state, data){
+    setColumnData(state, data) {
       state.columnData = data;
     },
-    setColumnDataPearls(state, data){
+    setColumnDataPearls(state, data) {
       state.columnDataPearls = data;
     },
-    setDataStat( state, status ){
+    setDataStat(state, status) {
       state.dataStat = status;
     },
-    setDataStatS( state, status ){
+    setDataStatS(state, status) {
       state.dataStatS = status;
     },
-    setPearlsStat( state, status ){
+    setPearlsStat(state, status) {
       state.pearlsStat = status;
     },
-    setGrafikStat( state, status ){
+    setGrafikStat(state, status) {
       state.grafikStat = status;
     },
-    setGrafikPearlsStat( state, status ){
+    setGrafikPearlsStat(state, status) {
       state.grafikPearlsStat = status;
     },
-    setPeriodeStat( state, status ){
+    setPeriodeStat(state, status) {
       state.periodeStat = status;
     },
-    setIdCU ( state, id ){
+    setIdCU(state, id) {
       state.idCU = id;
     },
-    setUpdate ( state, data ){
+    setUpdate(state, data) {
       state.update = data;
     },
-    setUpdateStat( state,status ){
+    setUpdateStat(state, status) {
       state.updateStat = status;
     },
-    setRules( state, rules ){
+    setRules(state, rules) {
       state.rules = rules;
     },
-    setOptions( state, options ){
+    setOptions(state, options) {
       state.options = options;
     }
   }

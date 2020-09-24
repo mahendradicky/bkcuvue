@@ -4,6 +4,7 @@ namespace App\Imports;
 
 use Auth;
 use App\LaporanCuDraft;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
@@ -12,10 +13,10 @@ use Maatwebsite\Excel\Concerns\WithChunkReading;
 class LaporanCuDraftAllImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChunkReading
 {
     /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
+     * @param array $row
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
     public function model(array $row)
     {
 
@@ -61,6 +62,7 @@ class LaporanCuDraftAllImport implements ToModel, WithHeadingRow, WithBatchInser
             'harga_pasar' => $row['harga_pasar'],
             'periode' => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['periode']),
             'created_at' => \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($row['tanggal_buat']),
+
         ]);
     }
 
@@ -68,7 +70,7 @@ class LaporanCuDraftAllImport implements ToModel, WithHeadingRow, WithBatchInser
     {
         return 1000;
     }
-    
+
     public function chunkSize(): int
     {
         return 1000;

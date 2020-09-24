@@ -933,7 +933,7 @@ class KegiatanBKCUController extends Controller{
 		$kelas->panitia_dalam()->sync([]);
 
 		$kelas->delete();
-
+		// broadcast(new ($update))->toOthers();
 		return response()
 			->json([
 				'deleted' => true,

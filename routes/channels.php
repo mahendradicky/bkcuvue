@@ -12,7 +12,13 @@
 */
 
 use Illuminate\Support\Facades\Broadcast;
+use Tymon\JWTAuth\Contracts\Providers\Auth;
 
 Broadcast::channel('App.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
+});
+
+Broadcast::channel('KegiatanDestroyChannel.{id}', function ($user, $id) {
+    // $id = Auth::user()->getId();
+    return (int) $user->id ===  $user->id;
 });

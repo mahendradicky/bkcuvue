@@ -20,6 +20,6 @@ class LaporanCuDraft extends Model
 
     public function Cu()
     {
-        return $this->belongsTo('App\Cu','no_ba','no_ba')->select('id','no_ba','name')->withTrashed();
+        return $this->belongsTo('App\Cu', 'no_ba', 'no_ba')->select('id', 'no_ba', 'name')->withTrashed();
     }
 }

@@ -27,13 +27,14 @@ class Notif extends Notification implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($tipe, $url, $message)
-    {   
-        $this->user_id = Auth::id();
-        $this->aktivis = User::with('Cu','aktivis')->where('id',$this->user_id)->select('id','id_cu','id_aktivis','name')->first();
+    public function __construct($tipe, $ids, $message)
+    {
+        $this->user_id = $ids['id'];
+        $this->aktivis = User::with('Cu', 'aktivis')->where('id', $this->user_id)->select('id', 'id_cu', 'id_aktivis', 'name')->first();
         $this->created_at = Carbon::now()->toDateTimeString();
         $this->tipe = $tipe;
-        $this->url = $url;
+        $this->url['id_cu'] = $ids['id_cu'];
+        $this->url['id_tp'] = $ids['id_tp'];
         $this->message = $message;
     }
 
@@ -45,7 +46,7 @@ class Notif extends Notification implements ShouldQueue
      */
     public function via($notifiable)
     {
-        return ['database','broadcast'];
+        return ['database', 'broadcast'];
     }
 
     /**
@@ -73,8 +74,8 @@ class Notif extends Notification implements ShouldQueue
         return [
             //
         ];
-		}
-		
+    }
+
     public function toDatabase($notifiable)
     {
         return [
@@ -88,8 +89,8 @@ class Notif extends Notification implements ShouldQueue
     public function toBroadcast($notifiable)
     {
         return new BroadcastMessage([
-            'aktivis'=> $this->aktivis,
-            'created_at'=> $this->created_at,
+            'aktivis' => $this->aktivis,
+            'created_at' => $this->created_at,
             'user_id' => $this->user_id,
             'tipe' => $this->tipe,
             'url' => $this->url,

@@ -5,22 +5,23 @@ namespace App\Imports;
 use Auth;
 use App\LaporanCuDraft;
 use App\Cu;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 use Maatwebsite\Excel\Concerns\WithBatchInserts;
 use Maatwebsite\Excel\Concerns\WithChunkReading;
 
-class LaporanCuDraftImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChunkReading
+class LaporanCuDraftImport implements ToModel, WithHeadingRow, WithBatchInserts, WithChunkReading, ShouldQueue
 {
     /**
-    * @param array $row
-    *
-    * @return \Illuminate\Database\Eloquent\Model|null
-    */
+     * @param array $row
+     *
+     * @return \Illuminate\Database\Eloquent\Model|null
+     */
     public function model(array $row)
     {
         $id = Auth::user()->getIdCu();
-        $cu = Cu::where('id',$id)->select('id','no_ba')->first();
+        $cu = Cu::where('id', $id)->select('id', 'no_ba')->first();
 
         return new LaporanCuDraft([
             'id_user' => Auth::user()->getId(),
@@ -71,7 +72,7 @@ class LaporanCuDraftImport implements ToModel, WithHeadingRow, WithBatchInserts,
     {
         return 1000;
     }
-    
+
     public function chunkSize(): int
     {
         return 1000;

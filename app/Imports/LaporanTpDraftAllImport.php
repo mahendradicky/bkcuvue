@@ -20,10 +20,8 @@ class LaporanTpDraftAllImport implements ToModel, WithHeadingRow, WithBatchInser
     public function model(array $row)
     {
         return new LaporanTpDraft([
-            // LaporanTpDraft::create([
             'id_user' => Auth::user()->getId(),
             'no_ba' => $row['no_ba'],
-            // dd($row['no_ba']),
             'no_tp' => $row['no_tp'],
             'l_biasa' => $row['lelaki_biasa'],
             'l_lbiasa' => $row['lelaki_luar_biasa'],

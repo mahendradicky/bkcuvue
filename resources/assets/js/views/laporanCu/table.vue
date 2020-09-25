@@ -19,32 +19,40 @@
           class="btn btn-light btn-block btn-icon mb-1"
           :disabled="itemDataStat === 'loading'"
           @click.prevent="columnGroup('anggota')"
-        >Anggota</button>
+        >
+          Anggota
+        </button>
         <button
           type="button"
           class="btn btn-light btn-block btn-icon mb-1"
           :disabled="itemDataStat === 'loading'"
           @click.prevent="columnGroup('aset')"
-        >Aset</button>
+        >
+          Aset
+        </button>
         <button
           type="button"
           class="btn btn-light btn-block btn-icon mb-1"
           :disabled="itemDataStat === 'loading'"
           @click.prevent="columnGroup('shu')"
-        >SHU</button>
+        >
+          SHU
+        </button>
         <button
           type="button"
           class="btn btn-light btn-block btn-icon mb-1"
           v-tooltip:top="'Kolom Piutang'"
           :disabled="itemDataStat === 'loading'"
           @click.prevent="columnGroup('piutang')"
-        >Piutang</button>
+        >
+          Piutang
+        </button>
       </template>
 
       <template slot="button-desktop">
         <!-- tambah -->
         <router-link
-          :to="{ name: kelas + 'Create'}"
+          :to="{ name: kelas + 'Create' }"
           class="btn btn-light btn-icon mb-1"
           v-if="currentUser.can && currentUser.can['create_laporan_cu']"
         >
@@ -53,7 +61,7 @@
 
         <!-- ubah-->
         <button
-          @click.prevent="ubahData(selectedItem.id,selectedItem.tp)"
+          @click.prevent="ubahData(selectedItem.id, selectedItem.tp)"
           class="btn btn-light btn-icon mb-1"
           v-if="currentUser.can && currentUser.can['update_laporan_cu']"
           :disabled="!selectedItem.id"
@@ -73,7 +81,7 @@
 
         <!-- detail-->
         <button
-          @click.prevent="detailData(selectedItem.id,selectedItem.tp)"
+          @click.prevent="detailData(selectedItem.id, selectedItem.tp)"
           class="btn btn-light btn-icon mb-1"
           v-if="currentUser.can && currentUser.can['update_laporan_cu']"
           :disabled="!selectedItem.id"
@@ -85,7 +93,11 @@
         <router-link
           :to="{ name: 'laporanCuDraft' }"
           class="btn btn-light btn-icon mb-1"
-          v-if="currentUser.can['upload_laporan_cu'] && laporanCuDraftCountStat == 'success' && laporanCuDraftCount > 0"
+          v-if="
+            currentUser.can['upload_laporan_cu'] &&
+            laporanCuDraftCountStat == 'success' &&
+            laporanCuDraftCount > 0
+          "
         >
           <i class="icon-table2"></i> Laporan Statistik CU [DRAFT]
         </router-link>
@@ -94,7 +106,11 @@
         <router-link
           :to="{ name: 'laporanTpDraft' }"
           class="btn btn-light btn-icon mb-1"
-          v-if="currentUser.can['upload_laporan_tp'] && laporanTpDraftCountStat == 'success' && laporanTpDraftCount > 0"
+          v-if="
+            currentUser.can['upload_laporan_tp'] &&
+            laporanTpDraftCountStat == 'success' &&
+            laporanTpDraftCount > 0
+          "
         >
           <i class="icon-table2"></i> Laporan Statistik TP/KP [DRAFT]
         </router-link>
@@ -103,7 +119,7 @@
       <template slot="button-mobile">
         <!-- tambah -->
         <router-link
-          :to="{ name: kelas + 'Create'}"
+          :to="{ name: kelas + 'Create' }"
           class="btn btn-light btn-icon btn-block mb-1"
           v-if="currentUser.can && currentUser.can['create_laporan_cu']"
         >
@@ -112,7 +128,7 @@
 
         <!-- ubah-->
         <button
-          @click.prevent="ubahData(selectedItem.id,selectedItem.tp)"
+          @click.prevent="ubahData(selectedItem.id, selectedItem.tp)"
           class="btn btn-light btn-icon btn-block mb-1"
           v-if="currentUser.can && currentUser.can['update_laporan_cu']"
           :disabled="!selectedItem.id"
@@ -132,7 +148,7 @@
 
         <!-- detail-->
         <button
-          @click.prevent="detailData(selectedItem.id,selectedItem.tp)"
+          @click.prevent="detailData(selectedItem.id, selectedItem.tp)"
           class="btn btn-light btn-icon btn-block mb-1"
           v-if="currentUser.can && currentUser.can['update_laporan_cu']"
           :disabled="!selectedItem.id"
@@ -144,7 +160,11 @@
         <router-link
           :to="{ name: 'laporanCuDraft' }"
           class="btn btn-light btn-icon btn-block mb-1"
-          v-if="currentUser.can['upload_laporan_cu'] && laporanCuDraftCountStat == 'success' && laporanCuDraftCount > 0"
+          v-if="
+            currentUser.can['upload_laporan_cu'] &&
+            laporanCuDraftCountStat == 'success' &&
+            laporanCuDraftCount > 0
+          "
         >
           <i class="icon-table2"></i> Laporan Statistik CU [DRAFT]
         </router-link>
@@ -153,7 +173,11 @@
         <router-link
           :to="{ name: 'laporanTpDraft' }"
           class="btn btn-light btn-icon btn-block mb-1"
-          v-if="currentUser.can['upload_laporan_tp'] && laporanTpDraftCountStat == 'success' && laporanTpDraftCount > 0"
+          v-if="
+            currentUser.can['upload_laporan_tp'] &&
+            laporanTpDraftCountStat == 'success' &&
+            laporanTpDraftCount > 0
+          "
         >
           <i class="icon-table2"></i> Laporan Statistik TP/KP [DRAFT]
         </router-link>
@@ -162,15 +186,22 @@
       <!-- item desktop -->
       <template slot="item-desktop" slot-scope="props">
         <tr
-          :class="{ 
-					'bg-info': selectedItem.id === props.item.id, 
-					'bg-warning' : props.item.periode < periode && selectedItem.id !== props.item.id }"
+          :class="{
+            'bg-info': selectedItem.id === props.item.id,
+            'bg-warning':
+              props.item.periode < periode && selectedItem.id !== props.item.id,
+          }"
           class="text-nowrap"
           @click="selectedRow(props.item)"
         >
-          <td
-            v-if="!columnData[0].hide"
-          >{{ props.index + 1 + (+itemData.current_page-1) * +itemData.per_page + '.'}}</td>
+          <td v-if="!columnData[0].hide">
+            {{
+              props.index +
+              1 +
+              (+itemData.current_page - 1) * +itemData.per_page +
+              "."
+            }}
+          </td>
           <td v-if="!columnData[1].hide && !columnData[1].disable">
             <check-value :value="props.item.cu_name"></check-value>
           </td>
@@ -187,7 +218,9 @@
             <span
               v-if="props.item.periode < periode"
               class="label label-warning"
-              v-tooltip:top="'Laporan ini bukanlah laporan periode ' + formatPeriode(periode)"
+              v-tooltip:top="
+                'Laporan ini bukanlah laporan periode ' + formatPeriode(periode)
+              "
             >
               <i class="icon-alert text-size-base"></i>
             </span>
@@ -198,129 +231,255 @@
             <check-value :value="props.item.tp"></check-value>
           </td>
           <td v-if="!columnData[7].hide">
-            <check-value :value="props.item.l_biasa" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.l_biasa"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[8].hide">
-            <check-value :value="props.item.l_lbiasa" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.l_lbiasa"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[9].hide">
-            <check-value :value="props.item.p_biasa" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.p_biasa"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[10].hide">
-            <check-value :value="props.item.p_lbiasa" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.p_lbiasa"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[11].hide">
-            <check-value :value="props.item.total_anggota" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.total_anggota"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[12].hide">
-            <check-value :value="props.item.total_anggota_lalu" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.total_anggota_lalu"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[13].hide">
-            <check-value :value="props.item.aset" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.aset"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[14].hide">
-            <check-value :value="props.item.aset_lalu" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.aset_lalu"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[15].hide">
-            <check-value :value="props.item.aset_masalah" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.aset_masalah"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[16].hide">
-            <check-value :value="props.item.aset_tidak_menghasilkan" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.aset_tidak_menghasilkan"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[17].hide">
-            <check-value :value="props.item.aset_likuid_tidak_menghasilkan" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.aset_likuid_tidak_menghasilkan"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[18].hide">
-            <check-value :value="props.item.aktiva_lancar" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.aktiva_lancar"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[19].hide">
-            <check-value :value="props.item.simpanan_saham" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.simpanan_saham"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[20].hide">
-            <check-value :value="props.item.simpanan_saham_lalu" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.simpanan_saham_lalu"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[21].hide">
-            <check-value :value="props.item.simpanan_saham_des" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.simpanan_saham_des"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[22].hide">
-            <check-value :value="props.item.nonsaham_unggulan" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.nonsaham_unggulan"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[23].hide">
-            <check-value :value="props.item.nonsaham_harian" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.nonsaham_harian"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[24].hide">
-            <check-value :value="props.item.hutang_spd" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.hutang_spd"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[25].hide">
-            <check-value :value="props.item.hutang_tidak_berbiaya_30hari" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.hutang_tidak_berbiaya_30hari"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[26].hide">
-            <check-value :value="props.item.total_hutang_pihak3" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.total_hutang_pihak3"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[27].hide">
-            <check-value :value="props.item.piutang_beredar" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.piutang_beredar"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[28].hide">
-            <check-value :value="props.item.piutang_bersih" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.piutang_bersih"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[29].hide">
-            <check-value :value="props.item.piutang_anggota" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.piutang_anggota"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[30].hide">
-            <check-value :value="props.item.piutang_lalai_1bulan" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.piutang_lalai_1bulan"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[31].hide">
-            <check-value :value="props.item.piutang_lalai_12bulan" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.piutang_lalai_12bulan"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[32].hide">
-            <check-value :value="props.item.rasio_beredar" valuetype="percentage"></check-value>
+            <check-value
+              :value="props.item.rasio_beredar"
+              valuetype="percentage"
+            ></check-value>
           </td>
           <td v-if="!columnData[33].hide">
-            <check-value :value="props.item.rasio_lalai" valuetype="percentage"></check-value>
+            <check-value
+              :value="props.item.rasio_lalai"
+              valuetype="percentage"
+            ></check-value>
           </td>
           <td v-if="!columnData[34].hide">
-            <check-value :value="props.item.dcr" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.dcr"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[35].hide">
-            <check-value :value="props.item.dcu" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.dcu"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[36].hide">
-            <check-value :value="props.item.dana_gedung" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.dana_gedung"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[37].hide">
-            <check-value :value="props.item.donasi" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.donasi"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[38].hide">
-            <check-value :value="props.item.bjs_saham" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.bjs_saham"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[39].hide">
-            <check-value :value="props.item.beban_penyisihan_dcr" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.beban_penyisihan_dcr"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[40].hide">
-            <check-value :value="props.item.investasi_likuid" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.investasi_likuid"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[41].hide">
-            <check-value :value="props.item.total_pendapatan" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.total_pendapatan"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[42].hide">
-            <check-value :value="props.item.total_biaya" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.total_biaya"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[43].hide">
-            <check-value :value="props.item.shu" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.shu"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[44].hide">
-            <check-value :value="props.item.shu_lalu" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.shu_lalu"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[45].hide">
-            <check-value :value="props.item.rata_aset" valuetype="currency"></check-value>
+            <check-value
+              :value="props.item.rata_aset"
+              valuetype="currency"
+            ></check-value>
           </td>
           <td v-if="!columnData[46].hide">
-            <check-value :value="props.item.laju_inflasi / 100" valuetype="percentage"></check-value>
+            <check-value
+              :value="props.item.laju_inflasi / 100"
+              valuetype="percentage"
+            ></check-value>
           </td>
           <td v-if="!columnData[47].hide">
-            <check-value :value="props.item.harga_pasar / 100" valuetype="percentage"></check-value>
+            <check-value
+              :value="props.item.harga_pasar / 100"
+              valuetype="percentage"
+            ></check-value>
           </td>
-          <td v-if="!columnData[48].hide" v-html="$options.filters.dateTime(props.item.created_at)"></td>
+          <td
+            v-if="!columnData[48].hide"
+            v-html="$options.filters.dateTime(props.item.created_at)"
+          ></td>
           <td v-if="!columnData[49].hide">
             <span
               v-if="props.item.created_at !== props.item.updated_at"
@@ -349,18 +508,25 @@
       <template slot="modal-body1">
         <div class="alert bg-info alert-styled-left mt-1 pt-1 pb-1">
           <p>
-            Laporan ini merupakan laporan konsolidasi dari beberapa laporan di Tp. Oleh karena hal tersebut maka untuk
-            melakukan perubahan pada laporan konsolidasi mesti melakukan perubahan pada laporan Tp yang dapat dipilih
-            dibawah:
+            Laporan ini merupakan laporan konsolidasi dari beberapa laporan di
+            Tp. Oleh karena hal tersebut maka untuk melakukan perubahan pada
+            laporan konsolidasi mesti melakukan perubahan pada laporan Tp yang
+            dapat dipilih dibawah:
           </p>
         </div>
         <hr />
 
         <div class="row">
-          <div class="col-md-6 pt-1 pb-1" v-for="laporanTp in listLaporanTpData">
-            <a class="btn btn-light btn-block" @click.prevent="ubahLaporanTp(laporanTp.id)">
+          <div
+            class="col-md-6 pt-1 pb-1"
+            v-for="laporanTp in listLaporanTpData"
+          >
+            <a
+              class="btn btn-light btn-block"
+              @click.prevent="ubahLaporanTp(laporanTp.id)"
+            >
               <i class="icon-pencil5"></i>
-              Ubah Laporan {{laporanTp.tp.name}}
+              Ubah Laporan {{ laporanTp.tp.name }}
             </a>
           </div>
         </div>
@@ -582,7 +748,6 @@ export default {
         }
 
         this.$store.dispatch(this.kelas + "/index", params);
-        // this.$store.dispatch(this.kelas + "/indexTotal");
         this.excelDownloadUrl = this.kelas;
       }
     },

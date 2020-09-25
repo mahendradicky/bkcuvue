@@ -229,24 +229,8 @@ class NotificationHelper
 		}
 	}
 
-	// public static function upload_anggota_cu($iduser, $idcu, $message)
-	// {
-	// 	// $users = User::where('id_cu', $idcu)->get();
-	// 	$users = User::permission(['upload_anggota_Cu'])->where('id_cu', $idcu)->where('status', 1)->where('login', '>=', \Carbon\Carbon::now()->subMonth(3))->get();
-
-	// 	// dd($users);
-	// 	Notification::send($users, new Notif(
-	// 		$iduser,
-	// 		'NotifUpload',
-	// 		$idcu,
-	// 		strtolower($message)
-	// 	));
-	// }
-
 	public static function upload_anggota_cu($ba_cu, $no_tp, $id, $message)
 	{
-		// $users = User::where('id', $id)->get();
-
 		$ba_cu_temp = null;
 		$idS = [];
 		$idS['id'] = $id;
@@ -258,11 +242,8 @@ class NotificationHelper
 		}
 		$idCuGet = Cu::where('no_ba', $ba_cu_temp)->pluck('id')->first();
 		$idS['id_cu'] = $idCuGet;
-
-		// $idTpGet = Tp::where('id_cu', $idCuGet)->where('no_tp', $no_tp)->pluck('id')->first();
 		$idTpGet = Tp::where('id_cu', $idCuGet)->where('no_tp', $no_tp)->pluck('id')->first();
 		$idS['id_tp'] = $idTpGet;
-		// dd($idS['id_tp']);
 
 		$users = User::where('id_cu', $idCuGet)->orWhere('id_cu', '0')->where('status', 1)->where('login', '>=', \Carbon\Carbon::now()->subMonth(3))->get();
 
@@ -274,8 +255,6 @@ class NotificationHelper
 	}
 	public static function upload_laporan_cu_all($ba_cu, $no_tp, $id, $message)
 	{
-
-		// dd($ba_cu, $no_tp, $id, $message);
 		$ba_cu_temp = null;
 		$idS = [];
 		$idS['id'] = $id;
@@ -288,12 +267,8 @@ class NotificationHelper
 
 		$idCuGet = Cu::where('no_ba', $ba_cu_temp)->pluck('id')->first();
 		$idS['id_cu'] = $idCuGet;
-
-		// $idTpGet = Tp::where('id_cu', $idCuGet)->where('no_tp', $no_tp)->pluck('id')->first();
 		$idTpGet = Tp::where('id_cu', $idCuGet)->where('no_tp', $no_tp)->pluck('id')->first();
 		$idS['id_tp'] = $idTpGet;
-		// dd($idS['id_tp']);
-
 
 		$users = User::where('id_cu', $idCuGet)->orWhere('id_cu', '0')->where('status', 1)->where('login', '>=', \Carbon\Carbon::now()->subMonth(3))->get();
 
@@ -318,12 +293,8 @@ class NotificationHelper
 		}
 		$idCuGet = Cu::where('no_ba', $ba_cu_temp)->pluck('id')->first();
 		$idS['id_cu'] = $idCuGet;
-
-		// $idTpGet = Tp::where('id_cu', $idCuGet)->where('no_tp', $no_tp)->pluck('id')->first();
 		$idTpGet = Tp::where('id_cu', $idCuGet)->where('no_tp', $no_tp)->pluck('id')->first();
 		$idS['id_tp'] = $idTpGet;
-		// dd($idS['id_tp']);
-
 		$users = User::where('id_cu', $idCuGet)->orWhere('id_cu', '0')->where('status', 1)->where('login', '>=', \Carbon\Carbon::now()->subMonth(3))->get();
 
 		Notification::send($users, new Notif(
